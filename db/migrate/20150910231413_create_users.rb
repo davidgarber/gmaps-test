@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.float :latitude
       t.float :longitude
-      t.String :address
+      t.string :address
       t.text :description
       t.string :title
 
