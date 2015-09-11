@@ -8,7 +8,11 @@ class UsersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
-      marker.infowindow
+      marker.infowindow user.description
+      marker.picture({
+       "url" => "/logo.png",
+       "width" =>  32,
+       "height" => 32})
     end
   end
 
