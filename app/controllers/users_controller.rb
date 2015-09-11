@@ -9,11 +9,7 @@ class UsersController < ApplicationController
       marker.lat user.latitude
       marker.lng user.longitude
       marker.infowindow user.description
-      marker.picture({
-       "url" => "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-       "width" =>  32,
-       "height" => 32})
-       marker.json({title: user.title })
+
     end
   end
 
